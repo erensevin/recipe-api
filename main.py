@@ -33,7 +33,7 @@ def authenticate(credentials: HTTPBasicCredentials = Depends(security)):
 def read_root():
     return {"message": "Welcome to the Recipe Scraper API!"}
 
-@app.post("/scrape")
+@app.post("/scrape/")
 def scrape_recipe(request: dict, username: str = Depends(authenticate)) -> dict:
     """
     Scrape recipe data from a given URL.
