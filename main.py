@@ -61,7 +61,3 @@ def scrape_recipe(request: dict, username: str = Depends(authenticate)) -> dict:
         return {"error": "Website not implemented for scraping yet"}
     except Exception as e:
         return {"error": str(e)}
-
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
